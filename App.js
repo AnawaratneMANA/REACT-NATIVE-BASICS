@@ -22,7 +22,9 @@ const App: () => Node = () => {
   return (
     <View style={styles.body}>
       <Text style={styles.text}> {name} </Text>
-      <Button title="Update the Session" onPress={onClickHandler}></Button>
+      <View style={styles.button}>
+        <Button title="Update the Session" onPress={onClickHandler}></Button>
+      </View>
     </View>
   );
 };
@@ -44,6 +46,10 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     marginBottom: 10,
     textTransform: "uppercase"
+  },
+  button: {
+    width: 200,
+    height: 60
   }
 });
 
