@@ -12,15 +12,21 @@ import { StyleSheet, Text, View, Button, Linking } from "react-native";
 
 const App: () => Node = () => {
 
+  // Single Value State.
   const [name, setName] = useState("Original Name");
+
+  // Multi-value state.
+  const [session, setSession] = useState({number: 5, title: 'Original Title'});
 
   const onClickHandler = () => {
     setName("Update Name.");
+    setSession({number: 8, title: 'Updated Title'});
   }
 
   return (
     <View style={styles.body}>
       <Text style={styles.text}> {name} </Text>
+      <Text style={styles.text}> Session Number: {session.number}  Session Title: {session.title}</Text>
       <Button title="Update the Name" onPress={onClickHandler}></Button>
     </View>
   );
