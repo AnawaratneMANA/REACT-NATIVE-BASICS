@@ -13,25 +13,20 @@ import { StyleSheet, Text, View, Button, Linking } from "react-native";
 const App: () => Node = () => {
 
   // Single Value State.
-  const [name, setName] = useState("Original Name");
-
-  // Multi-value state.
-  const [session, setSession] = useState({number: 5, title: 'Original Title'});
-
-  //Boolean state values.
-  const [current, setCurrent] = useState(true);
+  const [name, setName] = useState("Inline styling");
 
   const onClickHandler = () => {
     setName("Update Name.");
-    setSession({number: 8, title: 'Updated Title'});
-    setCurrent(false);
   }
 
   return (
-    <View style={styles.body}>
+    <View style={{
+      backgroundColor: "#4a4a4a",
+      alignItems: "center",
+      justifyContent: "center",
+      flex: 1,
+    }}>
       <Text style={styles.text}> {name} </Text>
-      <Text style={styles.text}> Session Number: {session.number}  Session Title: {session.title}</Text>
-      <Text style={styles.text}>{current ? 'current session enabled' : 'new session is enabled'}</Text>
       <Button title="Update the Session" onPress={onClickHandler}></Button>
     </View>
   );
