@@ -6,15 +6,22 @@
  * @flow strict-local
  */
 
-import React from "react";
+import React, {useState} from "react";
 import type { Node } from "react";
 import { StyleSheet, Text, View, Button, Linking } from "react-native";
 
 const App: () => Node = () => {
+
+  const [name, setName] = useState("Original Name");
+
+  const onClickHandler = () => {
+    setName("Update Name.");
+  }
+
   return (
     <View style={styles.body}>
-      <Text style={styles.text}> Click Here to Navigate to the YouTube.</Text>
-      <Button title="Open YouTube" onPress={() => {Linking.openURL('https://www.youtube.com/')}}> Open YouTube.</Button>
+      <Text style={styles.text}> {name} </Text>
+      <Button title="Update the Name" onPress={onClickHandler}></Button>
     </View>
   );
 };
