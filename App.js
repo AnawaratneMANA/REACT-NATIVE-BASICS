@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase"
   },
   view1: {
-    flex: 1,
+    flex: 2,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#000000"
