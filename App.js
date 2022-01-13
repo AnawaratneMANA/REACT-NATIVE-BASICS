@@ -18,16 +18,21 @@ const App: () => Node = () => {
   // Multi-value state.
   const [session, setSession] = useState({number: 5, title: 'Original Title'});
 
+  //Boolean state values.
+  const [current, setCurrent] = useState(true);
+
   const onClickHandler = () => {
     setName("Update Name.");
     setSession({number: 8, title: 'Updated Title'});
+    setCurrent(false);
   }
 
   return (
     <View style={styles.body}>
       <Text style={styles.text}> {name} </Text>
       <Text style={styles.text}> Session Number: {session.number}  Session Title: {session.title}</Text>
-      <Button title="Update the Name" onPress={onClickHandler}></Button>
+      <Text style={styles.text}>{current ? 'current session enabled' : 'new session is enabled'}</Text>
+      <Button title="Update the Session" onPress={onClickHandler}></Button>
     </View>
   );
 };
