@@ -21,33 +21,26 @@ const App: () => Node = () => {
 
   return (
     <View style={styles.body}>
-      <Text style={styles.text}> {name} </Text>
-      <View style={combineStyles.button}>
-        <Button title="Update the Session" onPress={onClickHandler}></Button>
+      <View style={styles.view1}>
+        <Text style={styles.text}> 1 </Text>
+      </View>
+      <View style={styles.view2}>
+        <Text style={styles.text}> 2 </Text>
+      </View>
+      <View style={styles.view1}>
+        <Text style={styles.text}> 3 </Text>
       </View>
     </View>
   );
 };
 
-
-
-const sizeStyles = StyleSheet.create({
-  button: {
-    width: 100,
-    height: 60,
-  }
-})
-
 const styles = StyleSheet.create({
   body: {
-    width: "100%",
-    height: "50%",
-    backgroundColor: "#000000",
+    height: 400,
+    width: 400,
+    backgroundColor: "#bebebe",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 10,
-    borderColor: "#4a4a4a",
-    borderRadius: 10,
   },
   text: {
     color: "white",
@@ -56,14 +49,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textTransform: "uppercase"
   },
-  button: {
-    backgroundColor: "#000000",
-  }
+  view1: {
+    width: 100,
+    height: 100,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#000000"
+  },
+  view2: {
+    width: 100,
+    height: 100,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#818181"
+  },
 });
-
-// Combined Style Sheets.
-const combineStyles = StyleSheet.compose(sizeStyles.button, styles.button);
-
-
 
 export default App;
