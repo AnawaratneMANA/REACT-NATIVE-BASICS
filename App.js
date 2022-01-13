@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * Example showing how to link navigate from the Button.
  * https://github.com/facebook/react-native
  *
  * @format
