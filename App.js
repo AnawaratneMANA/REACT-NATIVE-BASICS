@@ -36,12 +36,11 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   body: {
-    height: 400,
-    width: "100%",
-    flexDirection: 'column',
+    flex: 1,
+    flexDirection: 'row',
     backgroundColor: "#bebebe",
-    alignItems: "flex-end",
-    justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "flex-start",
   },
   text: {
     color: "white",
@@ -51,13 +50,15 @@ const styles = StyleSheet.create({
     textTransform: "uppercase"
   },
   view1: {
-    flex: 2,
+    width: 100,
+    height: 100,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#000000"
   },
   view2: {
-    flex: 1,
+    width: 100,
+    height: 100,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#818181"
