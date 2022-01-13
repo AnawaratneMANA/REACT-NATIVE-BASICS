@@ -37,10 +37,10 @@ const App: () => Node = () => {
 const styles = StyleSheet.create({
   body: {
     height: 400,
-    width: 400,
+    width: "100%",
     flexDirection: 'column',
     backgroundColor: "#bebebe",
-    alignItems: "flex-start",
+    alignItems: "flex-end",
     justifyContent: "center",
   },
   text: {
