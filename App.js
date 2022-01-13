@@ -22,12 +22,21 @@ const App: () => Node = () => {
   return (
     <View style={styles.body}>
       <Text style={styles.text}> {name} </Text>
-      <View style={styles.button}>
+      <View style={combineStyles.button}>
         <Button title="Update the Session" onPress={onClickHandler}></Button>
       </View>
     </View>
   );
 };
+
+
+
+const sizeStyles = StyleSheet.create({
+  button: {
+    width: 100,
+    height: 60,
+  }
+})
 
 const styles = StyleSheet.create({
   body: {
@@ -48,9 +57,13 @@ const styles = StyleSheet.create({
     textTransform: "uppercase"
   },
   button: {
-    width: 200,
-    height: 60
+    backgroundColor: "#000000",
   }
 });
+
+// Combined Style Sheets.
+const combineStyles = StyleSheet.compose(sizeStyles.button, styles.button);
+
+
 
 export default App;
