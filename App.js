@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   body: {
     height: 400,
     width: 400,
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     backgroundColor: "#bebebe",
     alignItems: "center",
     justifyContent: "center",
