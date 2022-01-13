@@ -20,12 +20,7 @@ const App: () => Node = () => {
   }
 
   return (
-    <View style={{
-      backgroundColor: "#4a4a4a",
-      alignItems: "center",
-      justifyContent: "center",
-      flex: 1,
-    }}>
+    <View style={styles.body}>
       <Text style={styles.text}> {name} </Text>
       <Button title="Update the Session" onPress={onClickHandler}></Button>
     </View>
@@ -34,16 +29,21 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   body: {
+    width: "100%",
+    height: "50%",
     backgroundColor: "#000000",
     alignItems: "center",
     justifyContent: "center",
-    flex: 1,
+    borderWidth: 10,
+    borderColor: "#4a4a4a",
+    borderRadius: 10,
   },
   text: {
     color: "white",
     fontSize: 20,
     fontStyle: "italic",
-    marginBottom: 10
+    marginBottom: 10,
+    textTransform: "uppercase"
   }
 });
 
